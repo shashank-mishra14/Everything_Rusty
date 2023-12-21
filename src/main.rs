@@ -3,15 +3,15 @@ use std::io;
 use std::cmp::Ordering;
 
 fn main() {
-    println!("Please input your guess");
-
-    let mut guess = String::new();
 
     let mut secret_number = rand::thread_rng().gen_range(1.. 101);
 
     println!("The Secret Number is: {}", secret_number);
 
-    
+   loop{
+    println!("Please input your guess");
+
+    let mut guess = String::new();
     
     io::stdin()
         .read_line(&mut guess)
@@ -26,4 +26,5 @@ fn main() {
         Ordering::Greater => println!("Too Big"),
         Ordering::Equal => println!("You Win"),
     }
+   }
 }
