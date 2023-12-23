@@ -3,7 +3,7 @@ use std::cmp::Ordering;
 use std::io;
 use colored::*;
 fn main() {
-    let mut secret_number = rand::thread_rng().gen_range(1..101);
+    let secret_number = rand::thread_rng().gen_range(1..101);
 
     println!("The Secret Number is: {}", secret_number);
 
